@@ -35,7 +35,7 @@ To train the model, follow these steps:
 2. Run the training script:
 
    ```
-   python task_train_91.py.py
+   python task_train_91.py
    ```
 
    This script will load the images, preprocess them, define the model architecture, compile the model, and start training. You can adjust the number of epochs and batch size in the script as needed.
@@ -44,28 +44,8 @@ To train the model, follow these steps:
 
 ### Using the Trained Model
 
-To use the trained model for segmentation, you can import it into your own Python script as follows:
+To use the trained model for segmentation, you can run the following python file:
 
-```python
-import os
-import numpy as np
-from keras.models import load_model
-from keras.preprocessing.image import img_to_array, load_img
-
-# Load the trained model
-model = load_model('retina_model.h5')
-
-# Load an image for segmentation
-image_path = 'path/to/your/image.jpg'
-image = load_img(image_path, color_mode='grayscale')
-image_array = img_to_array(image)
-image_array = np.expand_dims(image_array, axis=0) / 255
-
-# Perform segmentation
-segmented_image = model.predict(image_array)
-
-# Post-process the segmented image as needed
-# (e.g., thresholding, applying morphological operations)
-
-# Display or save the segmented image
+```
+  python test_model.py
 ```
