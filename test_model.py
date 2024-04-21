@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 model = load_model('retina_segmentation_model_91.h5')
 
 # load the mask of the image
-mask = load_img('Data/test/mask/3.png', color_mode='grayscale')
+mask = load_img('Data/test/mask/10.png', color_mode='grayscale')
 
 # Load an image for segmentation
-image_path = 'Data/test/image/3.png'
+image_path = 'Data/test/image/10.png'
 image = load_img(image_path, color_mode='grayscale')
 image_array = img_to_array(image)
 image_array = np.expand_dims(image_array, axis=0) / 255
