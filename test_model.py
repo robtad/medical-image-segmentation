@@ -5,7 +5,7 @@ from keras.preprocessing.image import img_to_array, load_img
 import matplotlib.pyplot as plt
 
 # Load the trained model
-model = load_model('retina_segmentation_model_91.h5')
+model = load_model('retina_model_4_layer.h5')
 
 # load the mask of the image
 mask = load_img('Data/test/mask/10.png', color_mode='grayscale')
