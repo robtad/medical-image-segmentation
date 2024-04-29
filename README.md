@@ -49,3 +49,4 @@ To use the trained model for segmentation, you can run the following python file
 ```
   python test_model.py
 ```
+There are 2 models, one was made using 80 epoch other with 50
